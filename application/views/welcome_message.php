@@ -27,6 +27,85 @@
 		}
 
 		/* Header Styles */
+
+		.top-bar {
+			background: linear-gradient(135deg, #818cf8 0%, #8b5cf6 100%);
+			color: white;
+			padding: 8px 0;
+			font-size: 14px;
+		}
+
+		.top-bar-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 20px;
+		}
+
+		.location-time {
+			display: flex;
+			gap: 20px;
+		}
+
+		.location-info,
+		.time-info {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.location-info i,
+		.time-info i {
+			font-size: 16px;
+		}
+
+		.loading-text {
+			animation: pulse 1.5s infinite;
+		}
+
+		@keyframes pulse {
+			0% {
+				opacity: 1;
+			}
+
+			50% {
+				opacity: 0.5;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.social-links {
+			display: flex;
+			gap: 15px;
+		}
+
+		.social-links a {
+			color: white;
+			text-decoration: none;
+			transition: opacity 0.3s ease;
+		}
+
+		.social-links a:hover {
+			opacity: 0.8;
+		}
+
+		@media (max-width: 768px) {
+			.social-links {
+				display: none;
+				/* Hide social links on mobile */
+			}
+
+			.location-time {
+				width: 100%;
+				justify-content: space-between;
+			}
+		}
+
 		header {
 			background-color: white;
 			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -303,7 +382,6 @@
 		.social-links {
 			display: flex;
 			gap: 1rem;
-			margin-top: 1rem;
 		}
 
 		.social-links a {
@@ -449,6 +527,20 @@
 <body>
 	<!-- Header remains the same -->
 	<header>
+		<div class="top-bar">
+			<div class="top-bar-container">
+				<div class="location-time">
+					<div class="location-info">
+						<i class="fas fa-map-marker-alt"></i>
+						<span id="location"><?php echo $country; ?></span>
+					</div>
+					<div class="time-info">
+						<i class="far fa-clock"></i>
+						<span id="current-time"><?php echo $currentTime; ?></span>
+					</div>
+				</div>
+			</div>
+		</div>
 		<nav class="nav-container">
 			<div class="logo">EduLearn</div>
 			<ul class="nav-menu">
@@ -822,3 +914,42 @@
 			lastScroll = currentScroll;
 		});
 	</script>
+
+	<script>
+		// Initialize the start time from PHP
+		let startTime = "<?php echo $currentTime; ?>";
+		let currentTime = new Date(startTime);
+
+		function updateTime() {
+            // Increment the time by one second
+            currentTime.setSeconds(currentTime.getSeconds() + 1);
+            
+            // Get hours, minutes, seconds
+            let hours = currentTime.getHours();
+            let minutes = currentTime.getMinutes().toString().padStart(2, '0');
+            let seconds = currentTime.getSeconds().toString().padStart(2, '0');
+
+            // Determine if it's AM or PM
+            let ampm = hours >= 12 ? 'PM' : 'AM';
+            
+            // Convert hours to 12-hour format
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            
+            // Format the time in 'YYYY-MM-DD HH:MM:SS AM/PM'
+            let day = currentTime.getDate().toString().padStart(2, '0');
+            let month = (currentTime.getMonth() + 1).toString().padStart(2, '0');
+            let year = currentTime.getFullYear();
+            
+            let formattedTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${ampm}`;
+
+			// Update the HTML element with the current time
+			document.getElementById('current-time').innerText = "Time: " + formattedTime;
+		}
+
+		// Update the time every second
+		setInterval(updateTime, 1000);
+	</script>
+</body>
+
+</html>

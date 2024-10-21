@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2024 at 08:50 AM
+-- Generation Time: Oct 21, 2024 at 02:22 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -20,6 +20,40 @@ SET time_zone = "+00:00";
 --
 -- Database: `schools`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `countries`
+--
+
+CREATE TABLE `countries` (
+  `id` int(11) NOT NULL,
+  `country_name` varchar(255) NOT NULL,
+  `country_code` varchar(3) NOT NULL,
+  `currency_code` varchar(3) NOT NULL,
+  `currency_symbol` varchar(5) DEFAULT NULL,
+  `exchange_rate_to_usd` decimal(10,4) NOT NULL,
+  `timezone` varchar(255) DEFAULT NULL,
+  `phone_prefix` varchar(10) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `countries`
+--
+
+INSERT INTO `countries` (`id`, `country_name`, `country_code`, `currency_code`, `currency_symbol`, `exchange_rate_to_usd`, `timezone`, `phone_prefix`, `created_at`) VALUES
+(1, 'India', 'IN', 'INR', '₹', '75.0000', 'Asia/Kolkata', '+91', '2024-10-21 11:41:40'),
+(2, 'United States', 'US', 'USD', '$', '1.0000', 'America/New_York', '+1', '2024-10-21 11:41:40'),
+(3, 'United Kingdom', 'GB', 'GBP', '£', '0.7500', 'Europe/London', '+44', '2024-10-21 11:41:40'),
+(4, 'Australia', 'AU', 'AUD', 'A$', '1.3500', 'Australia/Sydney', '+61', '2024-10-21 11:41:40'),
+(5, 'Canada', 'CA', 'CAD', 'C$', '1.2800', 'America/Toronto', '+1', '2024-10-21 11:41:40'),
+(6, 'China', 'CN', 'CNY', '¥', '6.4500', 'Asia/Shanghai', '+86', '2024-10-21 11:41:40'),
+(7, 'Russia', 'RU', 'RUB', '₽', '75.0000', 'Europe/Moscow', '+7', '2024-10-21 11:41:40'),
+(8, 'Germany', 'DE', 'EUR', '€', '0.8500', 'Europe/Berlin', '+49', '2024-10-21 11:41:40'),
+(9, 'Japan', 'JP', 'JPY', '¥', '110.0000', 'Asia/Tokyo', '+81', '2024-10-21 11:41:40'),
+(10, 'Brazil', 'BR', 'BRL', 'R$', '5.3000', 'America/Sao_Paulo', '+55', '2024-10-21 11:41:40');
 
 -- --------------------------------------------------------
 
@@ -228,6 +262,12 @@ INSERT INTO `students` (`student_id`, `first_name`, `last_name`, `email`, `phone
 --
 
 --
+-- Indexes for table `countries`
+--
+ALTER TABLE `countries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `courses`
 --
 ALTER TABLE `courses`
@@ -271,6 +311,12 @@ ALTER TABLE `students`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `countries`
+--
+ALTER TABLE `countries`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `courses`
