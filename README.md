@@ -2,6 +2,14 @@
 
 **EduLearn** is an online platform designed for students to purchase courses, learn from expert teachers, and receive guidance on various topics. It is a popular and trusted platform offering a wide range of courses that cater to different learning needs. After completing a course, students can take a test and earn a certificate of completion, which helps them in their career progression. With a user-friendly interface, EduLearn provides an excellent learning experience, both for users in India and internationally.
 
+
+## Built With
+
+- **Framework**: [CodeIgniter 3.1.13](https://codeigniter.com)
+- **Backend**: PHP
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap for responsive design
+- **Database**: MySQL
+- **Version Control**: Git
 ---
 
 ## Features
