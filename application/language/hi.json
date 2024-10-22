@@ -1,0 +1,106 @@
+{
+    "time": "समय:",
+    "nav": {
+        "home": "होम",
+        "courses": "पाठ्यक्रम",
+        "about": "हमारे बारे में",
+        "contact": "संपर्क"
+    },
+    "languages": {
+        "hi": "हिन्दी",
+        "en": "अंग्रेज़ी"
+    },
+    "menu" : "मेन्यू",
+    "language": "भाषा",
+    "login": "लॉगिन",
+    "signup": "साइन अप",
+    "logout": "लोग आउट",
+
+    "headline": "ऑनलाइन शिक्षा के साथ अपने भविष्य को रूपांतरित करें",
+    "subheadline": "दुनिया के किसी भी कोने से गुणवत्ता शिक्षा प्राप्त करें",
+    "explore": "पाठ्यक्रम खोजें",
+    "popular_courses": "लोकप्रिय पाठ्यक्रम",
+    "courseLabel": "छात्र",
+    "courseBedge1": "बेस्टसेलर",
+    "courseBedge2": "लोकप्रिय",
+    "courseBedge3": "नया",
+    "courseBedge4": "विशेष रुप से प्रदर्शित",
+    "courseBedge5": "हॉट",
+    "enrollbtn": "अभी नामांकन करें",
+
+    "ratings": "रेटिंग्स",
+    "students_enrolled": "नामांकित छात्र",
+    "hours_of_content": "सामग्री के घंटे",
+    "hours_of_video": "वीडियो के घंटे",
+    "lessons": "पाठ",
+    "certificate": "प्रमाणपत्र",
+    "access": "पहुँच",
+    "course_description": "पाठ्यक्रम विवरण",
+    "what_you_will_learn": "आप क्या सीखेंगे",
+    "course_curriculum": "पाठ्यक्रम पाठ्यचर्या",
+    "full_lifetime_access": "पूर्ण जीवनकाल पहुंच",
+    "access_on_mobile_and_tv": "मोबाइल और टीवी पर पहुंच",
+    "certificate_of_completion": "समापन प्रमाणपत्र",
+    "premium_support": "प्रीमियम समर्थन",
+    "support_24x7": "24x7 समर्थन",
+    "modules": "मॉड्यूल",
+
+    "learn_prompt": "आप क्या सीखना चाहते हैं?",
+    "filters": "फ़िल्टर",
+    "all": "सभी",
+    "programming": "प्रोग्रामिंग",
+    "design": "डिज़ाइन",
+    "business": "व्यवसाय",
+    "marketing": "मार्केटिंग",
+    "personal_development": "व्यक्तिगत विकास",
+    "level": "स्तर",
+    "all_levels": "सभी स्तर",
+    "duration": "अवधि",
+    "any_duration": "कोई भी अवधि",
+    "price": "मूल्य",
+    "all_prices": "सभी मूल्य",
+    "view_all_courses": "सभी पाठ्यक्रम देखें",
+    "ai_machine_learning": "एआई और मशीन लर्निंग",
+    "view_all_ai_courses": "सभी एआई पाठ्यक्रम देखें",
+    "search_courses": "पाठ्यक्रम खोजें",
+
+    "levels": {
+        "beginner": "शुरुआती",
+        "intermediate": "मध्यम",
+        "advanced": "उन्नत"
+    },
+    "durations": {
+        "hours_0_2": "0-2 घंटे",
+        "hours_2_5": "2-5 घंटे",
+        "hours_5_plus": "5+ घंटे"
+    },
+    "prices": {
+        "free": "नि: शुल्क",
+        "paid": "भुगतान किया हुआ"
+    },
+
+    "about": "EduLearn के बारे में",
+    "about_description": "EduLearn एक प्रमुख ऑनलाइन लर्निंग प्लेटफ़ॉर्म है जो उच्च गुणवत्ता वाले पाठ्यक्रमों और विशेषज्ञ प्रशिक्षकों के माध्यम से छात्रों को उनके लक्ष्यों को प्राप्त करने में मदद करने के लिए समर्पित है।",
+    "footerquick_links": "अधिक सामग्री",
+    "quick_links": {
+        "home": "मुख्य पृष्ठ",
+        "all_courses": "सभी पाठ्यक्रम",
+        "about_us": "हमारे बारे में",
+        "instructors": "प्रशिक्षक",
+        "contact": "संपर्क करें"
+    },
+    "footercontact": "संपर्क सामान्य जानकारी",
+    "contact_info": {
+        "address": "123 लर्निंग स्ट्रीट, एजुकेशन सिटी",
+        "phone": "(555) 123-4567",
+        "email": "info@edulearn.com"
+    },
+    "footernewsletter": "न्यूज़लेटर",
+    "newsletter": {
+        "heading": "न्यूज़लेटर",
+        "description": "नवीनतम जानकारी और विशेष ऑफ़र के लिए हमारे न्यूज़लेटर की सदस्यता लें।",
+        "email_placeholder": "अपना ईमेल दर्ज करें",
+        "subscribe": "सदस्यता लें"
+    },
+    "footer": "© 2024 EduLearn. सर्वाधिकार सुरक्षित।"
+}

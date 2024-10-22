@@ -1,0 +1,99 @@
+{
+    "time": "Time:",
+    "nav": {
+        "home": "Home",
+        "courses": "Courses",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "languages": {
+        "hi": "Hindi",
+        "enin": "English (India)",
+        "enus": "English (USA)"
+    },
+    "menu": "Menu",
+    "language": "Language",
+    "login": "Login",
+    "signup": "Sign Up",
+    "headline": "Transform Your Future with Online Learning",
+    "subheadline": "Access quality education from anywhere in the world",
+    "explore": "Explore Courses",
+    "popular_courses": "Popular Courses",
+    "courseLabel": "Students",
+    "courseBedge1": "Bestseller",
+    "courseBedge2": "Popular",
+    "courseBedge3": "New",
+    "courseBedge4": "Featured",
+    "courseBedge5": "Hot",
+    "enrollbtn": "Enroll Now",
+    "ratings": "Ratings",
+    "students_enrolled": "Students Enrolled",
+    "hours_of_content": "Hours of Content",
+    "hours_of_video": "Hours of Video",
+    "lessons": "Lessons",
+    "certificate": "Certificate",
+    "access": "Access",
+    "course_description": "Course Description",
+    "what_you_will_learn": "What You'll Learn",
+    "course_curriculum": "Course Curriculum",
+    "full_lifetime_access": "Full Lifetime Access",
+    "access_on_mobile_and_tv": "Access on Mobile and TV",
+    "certificate_of_completion": "Certificate of Completion",
+    "premium_support": "Premium Support",
+    "modules": "Module",
+    "learn_prompt": "What do you want to learn?",
+    "filters": "Filters",
+    "all": "All",
+    "programming": "Programming",
+    "design": "Design",
+    "business": "Business",
+    "marketing": "Marketing",
+    "personal_development": "Personal Development",
+    "level": "Level",
+    "all_levels": "All Levels",
+    "duration": "Duration",
+    "any_duration": "Any Duration",
+    "price": "Price",
+    "all_prices": "All Prices",
+    "view_all_courses": "View All Courses",
+    "ai_machine_learning": "AI & Machine Learning",
+    "view_all_ai_courses": "View All AI Courses",
+    "search_courses": "Search Courses",
+    "levels": {
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced"
+    },
+    "durations": {
+        "hours_0_2": "0-2 Hours",
+        "hours_2_5": "2-5 Hours",
+        "hours_5_plus": "5+ Hours"
+    },
+    "prices": {
+        "free": "Free",
+        "paid": "Paid"
+    },
+    "about": "About EduLearn",
+    "about_description": "EduLearn is a leading online learning platform dedicated to helping students achieve their goals through high-quality courses and expert instructors.",
+    "footerquick_links": "Quick Links",
+    "quick_links": {
+        "home": "Home",
+        "all_courses": "All Courses",
+        "about_us": "About Us",
+        "instructors": "Instructors",
+        "contact": "Contact"
+    },
+    "footercontact": "Contact Info",
+    "contact_info": {
+        "address": "123 Learning St, Education City",
+        "phone": "(555) 123-4567",
+        "email": "info@edulearn.com"
+    },
+    "newsletter": {
+        "heading": "Newsletter",
+        "description": "Subscribe to our newsletter for updates and special offers.",
+        "email_placeholder": "Enter your email",
+        "subscribe": "Subscribe"
+    },
+    "footer": "© 2024 EduLearn. All rights reserved."
+}
