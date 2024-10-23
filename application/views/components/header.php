@@ -1,3 +1,28 @@
+<style>
+    #google_translate_element {
+        background: white;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    /* Google Translate Widget Styling */
+    .goog-te-gadget {
+        font-family: Arial, sans-serif !important;
+        color: transparent !important;
+    }
+
+    .goog-te-gadget .goog-te-combo {
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .goog-logo-link {
+        display: none !important;
+    }
+</style>
 <header>
     <div class="top-bar">
         <div class="top-bar-container">
@@ -35,6 +60,11 @@
                         <a href="<?php echo site_url('hi'); ?>"><i class="fas fa-check"></i><?= $t['languages']['hi']; ?></a>
                     </div>
                 </div>
+                <!-- <div class="dropdown-wrapper" style="position: relative;">
+                    <div class="dropdown-label2">
+                        <span id="google_translate_element"></span>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -44,15 +74,25 @@
         </a>
         <ul class="nav-menu">
             <li><a href="<?php echo site_url('/'); ?>"><?= $t['nav']['home']; ?></a></li>
-            <li><a href="<?php echo site_url('courses'); ?>"><?= $t['nav']['courses']; ?></a></li>
-            <li><a href="#about"><?= $t['nav']['about']; ?></a></li>
-            <li><a href="#contact"><?= $t['nav']['contact']; ?></a></li>
+            <li><a href="<?php echo site_url('/courses'); ?>"><?= $t['nav']['courses']; ?></a></li>
+            <li><a href="<?php echo site_url('/login'); ?>">Login</a></li>
+            <li><a href="<?php echo site_url('/resgister'); ?>">Register</a></li>
         </ul>
         <div class="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 </header>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
     // Initialize the start time from PHP

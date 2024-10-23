@@ -50,9 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome/index';
+$route['login'] = 'welcome/login'; // When /login is accessed, call login with 'login'
+$route['resgister'] = 'welcome/resgister'; // When /register is accessed, call register with 'register'
 $route['hi'] = 'welcome/index/hi'; // When /hi is accessed, call index with 'hi'
 $route['en'] = 'welcome/index/en'; // When /en is accessed, call index with 'en'
-$route['enUs'] = 'welcome/index/enUs'; // When /en is accessed, call index with 'enUs'
+$route['auth/do_login'] = 'welcome/do_login'; // When /enUs is accessed, call index with 'enUs'
 $route['courses'] = 'welcome/courses';
 $route['specializations/(:any)'] = 'welcome/specializations/$1';
 $route['students'] = 'students/index';

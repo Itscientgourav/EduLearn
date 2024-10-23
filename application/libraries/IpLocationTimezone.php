@@ -1,13 +1,13 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class IpLocationTimezone
-{   
+{
     private $CI;
     public function __construct()
     {
         // Get the CodeIgniter instance
-        $this->CI =& get_instance();
+        $this->CI = &get_instance();
     }
 
     // Function to get the user's IP address
@@ -29,14 +29,36 @@ class IpLocationTimezone
     {
         // Use ip-api to get location details based on IP
         $apiUrl2 = "http://ip-api.com/php/" . $ip;
-        $locationData2 = file_get_contents($apiUrl2);
 
-        if ($locationData2 !== false) {
-            // ip-api returns serialized data, so use unserialize()
-            $locationDetails = unserialize($locationData2);
-            return $locationDetails;
+        try {
+            // Use @ to suppress any warnings and handle the error manually
+            $locationData2 = @file_get_contents($apiUrl2);
+
+            // Check if the API request was successful
+            if ($locationData2 !== false) {
+                // ip-api returns serialized data, so use unserialize()
+                $locationDetails = unserialize($locationData2);
+
+                // Check if the API returned a successful status
+                if ($locationDetails && isset($locationDetails['status']) && $locationDetails['status'] === 'success') {
+                    return $locationDetails;
+                } else {
+                    // API responded but with an error status (e.g., 'fail')
+                    throw new Exception('API response status: ' . $locationDetails['status']);
+                }
+            } else {
+                // If the request fails (e.g., 500 error), throw an exception
+                throw new Exception('Unable to fetch location data.');
+            }
+        } catch (Exception $e) {
+            // Fallback to default location if API fails
+            return [
+                'country' => 'India',
+                'timezone' => 'Asia/Kolkata',
+                'ip' => $ip
+            ];
         }
-        return null;  // Return null if location fetching fails
+        // Return null if location fetching fails
     }
 
     // Function to set the timezone based on location
