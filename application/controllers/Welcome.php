@@ -167,4 +167,8 @@ class Welcome extends CI_Controller
     public function resgister() {
         $this->load->view('components/register');
     }
+
+    public function forget_password() {
+        $this->load->view('components/forget_password');
+    }
 }

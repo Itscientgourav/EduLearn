@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/login.css'); ?>">
+    <title>EduLearn - Reset Password</title>
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/forgot.css'); ?>">
 </head>
-
 <body>
     <div class="decoration">
         <svg class="blob blob-1" viewBox="0 0 200 200">
@@ -17,31 +16,34 @@
         </svg>
     </div>
 
-    <div class="login-container">
+    <div class="reset-container">
         <div class="logo"><a href="<?php echo site_url('/'); ?>">EduLearn</a></div>
-        <div class="welcome-text">
-            <h1>Welcome Back!</h1>
-            <p>Continue your learning journey with thousands of courses from top instructors around the world.</p>
+        <div class="header-text">
+            <h1>Forgot Your Password?</h1>
+            <p>Don't worry! It happens to the best of us. Enter your email address below and we'll help you reset your password.</p>
         </div>
-        <?php if ($this->session->flashdata('error')): ?>
-            <div class="error-message"><?php echo $this->session->flashdata('error'); ?></div>
-        <?php endif; ?>
-        <form action="<?php echo site_url('auth/do_login'); ?>" method="post">
+
+        <div class="tips-section">
+            <h2>📝 Important Information</h2>
+            <ul>
+                <li>Make sure to enter the email address associated with your account</li>
+                <li>Check your spam folder if you don't see the reset email</li>
+                <li>Reset link will expire in 24 hours for security</li>
+                <li>Contact support if you need additional assistance</li>
+            </ul>
+        </div>
+
+        <form>
             <div class="form-group">
                 <input type="email" id="email" required>
                 <label for="email">Email Address</label>
             </div>
-            <div class="form-group">
-                <input type="password" id="password" required>
-                <label for="password">Password</label>
-            </div>
-            <button type="submit" class="btn-login">Sign In to Learn</button>
-            <div class="links-container">
-                <a href="<?php echo site_url('/forget/password'); ?>">Forgot Password?</a>
-                <a href="<?php echo site_url('/resgister'); ?>">Create Account</a>
-            </div>
+            <button type="submit" class="btn-reset">Send Reset Link</button>
         </form>
+
+        <div class="back-to-login">
+            <a href="<?php echo site_url('/login'); ?>">← Back to Login</a>
+        </div>
     </div>
 </body>
-
 </html>

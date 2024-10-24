@@ -51,7 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'welcome/index';
 $route['login'] = 'welcome/login'; // When /login is accessed, call login with 'login'
+$route['forget/password'] = 'welcome/forget_password';
 $route['resgister'] = 'welcome/resgister'; // When /register is accessed, call register with 'register'
+$route['logout'] = 'welcome/logout';
 $route['hi'] = 'welcome/index/hi'; // When /hi is accessed, call index with 'hi'
 $route['en'] = 'welcome/index/en'; // When /en is accessed, call index with 'en'
 $route['auth/do_login'] = 'welcome/do_login'; // When /enUs is accessed, call index with 'enUs'
