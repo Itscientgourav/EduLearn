@@ -24,50 +24,6 @@
     }
 </style>
 <header>
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div class="location-time">
-                <div class="location-info">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span id="location"><?php echo $country; ?></span>
-                </div>
-                <div class="time-info">
-                    <i class="far fa-clock"></i>
-                    <?php echo $t['time']; ?><span id="current-time"><?php echo $currentTime; ?></span>
-                </div>
-            </div>
-            <div class="dropdown-container">
-                <div class="dropdown-wrapper" style="position: relative;">
-                    <div class="dropdown-label" onclick="toggleDropdown('menu-dropdown', this)">
-                        <i class="fas fa-bars"></i>
-                        <span><?= $t['menu']; ?></span>
-                    </div>
-                    <div id="menu-dropdown" class="dropdown-content">
-                        <a href="#"><i class="fas fa-home"></i>Home</a>
-                        <a href="#"><i class="fas fa-user"></i>Profile</a>
-                        <div class="separator"></div>
-                        <a href="#"><i class="fas fa-cog"></i>Settings</a>
-                        <a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                    </div>
-                </div>
-                <div class="dropdown-wrapper" style="position: relative;">
-                    <div class="dropdown-label" onclick="toggleDropdown('language-dropdown', this)">
-                        <i class="fas fa-globe"></i>
-                        <span><?= $t['language']; ?></span>
-                    </div>
-                    <div id="language-dropdown" class="dropdown-content">
-                        <a href="<?php echo site_url('en'); ?>"><i class="fas fa-check"></i><?= $t['languages']['en']; ?></a>
-                        <a href="<?php echo site_url('hi'); ?>"><i class="fas fa-check"></i><?= $t['languages']['hi']; ?></a>
-                    </div>
-                </div>
-                <!-- <div class="dropdown-wrapper" style="position: relative;">
-                    <div class="dropdown-label2">
-                        <span id="google_translate_element"></span>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div>
     <nav class="nav-container">
         <a href="<?php echo site_url('/'); ?>" style="text-decoration: none !important;">
             <div class="logo">EduLearn</div>
